@@ -37,7 +37,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "ru.qveex.test-lib"
                 artifactId = "screen"
-                version = "1.0.0"
+                version = "1.0.2"
             }
         }
         repositories {
