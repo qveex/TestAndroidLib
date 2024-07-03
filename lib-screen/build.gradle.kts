@@ -43,12 +43,13 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "ru.qveex.test-lib"
                 artifactId = "screen"
-                version = "1.0.4"
+                version = libs.versions.versionCode.get()
+                artifact("$buildDir/outputs/aar/lib-screen-release.aar")
             }
         }
         repositories {
             maven {
-                url = uri("https://jitpack.io")
+                url = uri("https://www.jitpack.io")
             }
         }
     }
@@ -56,7 +57,7 @@ afterEvaluate {
 
 dependencies {
 
-    implementation(project(":lib-utils"))
+    implementation(projects.libUtils)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

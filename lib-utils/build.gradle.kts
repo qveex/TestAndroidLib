@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    `maven-publish`
 }
 
 android {
@@ -32,6 +33,25 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.14"
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "ru.qveex.test-lib"
+                artifactId = "utils"
+                version = libs.versions.versionCode.get()
+                artifact("$buildDir/outputs/aar/lib-utils-release.aar")
+            }
+        }
+        repositories {
+            maven {
+                url = uri("https://www.jitpack.io")
+            }
+        }
     }
 }
 

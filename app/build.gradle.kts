@@ -11,8 +11,8 @@ android {
         applicationId = "ru.qveex.testlib"
         minSdk = 26
         targetSdk = 34
-        versionCode = 4
-        versionName = "1.0.4"
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -48,7 +48,7 @@ android {
 
 dependencies {
 
-    implementation(project(":lib-screen"))
+    implementation(projects.libScreen)
     //implementation(libs.lib.screen)
 
     implementation(libs.androidx.core.ktx)
