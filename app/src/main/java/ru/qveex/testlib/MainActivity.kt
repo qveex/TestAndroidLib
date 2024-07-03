@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TestLibTheme {
-
+                LibScreen()
             }
         }
     }
