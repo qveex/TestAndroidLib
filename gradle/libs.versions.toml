@@ -10,10 +10,10 @@ activityCompose = "1.9.0"
 composeBom = "2024.06.00"
 appcompat = "1.7.0"
 material = "1.12.0"
-lib-screen = "1.0.4"
+lib-screen = "1.0.5"
 
-versionCode = "105"
-versionName = "1.0.5"
+versionCode = "106"
+versionName = "1.0.6"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }

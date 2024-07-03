@@ -1,3 +1,5 @@
+import com.android.kotlin.multiplatform.ide.models.serialization.androidSourceSetKey
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -44,7 +46,6 @@ afterEvaluate {
                 groupId = "ru.qveex.test-lib"
                 artifactId = "screen"
                 version = libs.versions.versionCode.get()
-                artifact("$buildDir/outputs/aar/lib-screen-release.aar")
             }
         }
         repositories {

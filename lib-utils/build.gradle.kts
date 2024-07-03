@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.cfg.pseudocode.and
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -44,7 +46,6 @@ afterEvaluate {
                 groupId = "ru.qveex.test-lib"
                 artifactId = "utils"
                 version = libs.versions.versionCode.get()
-                artifact("$buildDir/outputs/aar/lib-utils-release.aar")
             }
         }
         repositories {
