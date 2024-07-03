@@ -28,6 +28,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.14"
+    }
 }
 
 afterEvaluate {
@@ -37,7 +43,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "ru.qveex.test-lib"
                 artifactId = "screen"
-                version = "1.0.3"
+                version = "1.0.4"
             }
         }
         repositories {
